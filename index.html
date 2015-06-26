@@ -39,7 +39,7 @@
             </div>
             <br>
             <div class="input-group">
-                <button type="submit" class="btn btn-default" ng-click="result= calc(montoInicial,incrementoMensual ,rendimiento,dias-1)">Calcular</button>
+                <button type="submit" class="btn btn-default"  ng-click="result= calc(montoInicial,incrementoMensual ,rendimiento,dias-1)">Calcular</button>
                 <button type="submit" class="btn btn-default" ng-click="reset()">Resetiar</button>
                 <h3>Monto Total: {{result[0] | number : 2 }}</h3>
                 <h3>Rendimiento Total: {{result[1]| number : 2}}</h3>        
@@ -56,8 +56,8 @@
             <tbody ng-init="objmeses = []">
                 <tr ng-repeat="x in objmeses">
                     <td>{{ x.mes }}</td>
-                    <td>{{ x.monto }}</td>
-                    <td>{{ x.rendimiento }}</td>
+                    <td>{{ x.monto | number : 2 }}</td>
+                    <td>{{ x.rendimiento| number : 2}}</td>
                  </tr>
             </tbody>
   
